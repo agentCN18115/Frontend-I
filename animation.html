@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        body{
+            background-color: rgb(13, 241, 13);
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid ;
+            animation-name: box;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            position: relative;
+        }
+
+        @keyframes box{
+            /* from{
+                width: 10px;
+                height: 10px;
+                border-radius: 0%;
+                background: red;
+            }
+
+            to{
+                width: 600px;
+                height: 600px;
+                border-radius: 100%;
+                background: rgb(39, 39, 245);
+            } */
+
+            0%{
+                left: 0px;
+                top: 0px;
+                background-color: aqua;
+            }
+
+            25%{
+                left: 500px;
+                top: 0px;
+                border-radius: 10px;
+                background-color: aqua;
+
+            }
+
+            50%{
+                left: 500px;
+                top: 500px;
+                background-color: aqua;
+
+            }
+
+            75%{
+                left: 0px;
+                top: 500px;
+                border-radius: 10px;
+                background-color: aqua;
+
+            }
+
+            100%{
+                left: 0px;
+                border-radius: 2px;
+                top: 0px;
+                background-color: aqua;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

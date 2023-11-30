@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 1fr 6fr 1fr;
+        }
+
+        .header{
+            background-color: rgb(8, 8, 68);
+            display: grid;
+            grid-template-columns: 100px;
+        }
+
+        .x{
+        
+            background-color: rgb(67, 67, 95);
+        }
+        .mid{
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr ;
+        }
+
+        .col{
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+
+        .col:nth-child(1){
+            display: grid;
+            grid-template-rows: 3fr  2fr 2fr 1fr ;
+            grid-gap: 6px;
+        }
+
+        .a{
+            background-color: bisque;
+            /* margin-left: 6px;
+            margin-right: 6px; */
+            margin: 6px;
+        }
+
+        .col:nth-child(2){
+            display: grid;
+            grid-template-rows: 3fr  2fr 2fr 1fr ;
+            grid-gap: 6px;
+        }  
+
+        .b{
+            background-color: bisque;
+            margin: 6px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .col:nth-child(3){
+            display: grid;
+            grid-template-rows: 3fr  2fr 2fr 1fr ;
+            grid-gap: 6px;
+        } 
+
+        .c{
+            background-color: bisque;
+            margin: 6px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .footer{
+            background-color: rgb(8, 8, 68);
+            display: grid;
+            grid-template-rows: 2fr 2fr;
+        }
+
+        .d:nth-child(1){
+            background-color: rgb(50, 50, 85);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="x"></div>
+        </div>
+        <div class="mid">
+            <div class="col">
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+                <div class="a"></div>
+            </div>
+            <div class="col">
+                <div class="b"></div>
+                <div class="b"></div>
+                <div class="b"></div>
+                <div class="b"></div>
+            </div>
+            <div class="col">
+                <div class="c"></div>
+                <div class="c"></div>
+                <div class="c"></div>
+                <div class="c"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="d"></div>
+            <div class="d"></div>
+        </div>
+
+    </div>
+</body>
+</html>
