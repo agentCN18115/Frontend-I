@@ -1,121 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="layout02_f.css"> -->
     <style>
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    color: white;
-    font-weight: 3px;
-    font-size: 20px;
-}
-body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-}
-.main{
-    height: 100%;
-    width: 60%;
-    padding: 30px;
-    /* border: 1px solid black; */
-    background-color:rgba(127, 255, 212, 0.432);
-    display: flex;
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            color: white;
+            font-size: 1rem;
+        }
 
-}
-.left{
-    height: 100%;
-    width: 90%;
-    /* border: 1px solid black; */
-}
-.right{
-    height: 100%;   
-    width: 10%;
-    /* border: 1px solid black; */
-    background-color: rgba(255, 166, 0, 0.774);
-    padding: .5%;
-    /* margin-top: 30px; */
-}
-.top{
-    height: 50%;
-    width: 97%;
-    /* border: 1px solid black; */
-    display: flex;
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+        }
 
-}
-.a{
-    height: 100%;
-    width: 67%;
-    background-color: rgba(255, 166, 0, 0.774);
-    margin-right: 3%;
-    padding: 1% ;
-    
-}
-.b{
-    height: 100%;
-    width: 30%;
-    /* background-color: orange; */
-}
-.b1{
-    height: 55%;
-    width: 100%;
-    padding: 3% ;
-    background-color: rgba(255, 166, 0, 0.774);
-}
-.b2{
-    height: 40%;
-    width: 100%;
-    margin-top:7%;
-    padding: 3% ;
-    background-color: rgba(255, 166, 0, 0.774);
-}
-.bottom{
-    height: 46.5%;
-    width: 97%;
-    /* border: 1px solid black; */
-    margin-top: 3%;
-}
-.i4{
-    height: 48%;
-    width: 32%;
-    padding: 1% ;
-    margin-right: 2.2%;
-    background-color: rgba(255, 166, 0, 0.774);
-    display: inline-block;
+        .main {
+            height: 100%;
+            width: 60%;
+            padding: 30px;
+            /* border: 1px solid black; */
+            background-color: rgba(127, 255, 212, 0.432);
+            display: flex;
 
-}
-.i5{
-    height: 48%;
-    width: 65%;
-    padding: 1% ;
-    background-color: rgba(255, 166, 0, 0.774);
-    display: inline-block;
-}
-.i6{
-    height: 45%;
-    width: 32%;
-    margin-right: 2.2%;
-    margin-top: 2.7%;
-    padding: 1% ;
-    background-color: rgba(255, 166, 0, 0.774);
-    display: inline-block;
+        }
 
-}
-#x{
-    height: 44.5%;
-    width: 30%;
-    margin-right: 0%;
-    background-color: rgba(255, 166, 0, 0.774);
-}
+        .left {
+            height: 100%;
+            width: 90%;
+            /* border: 1px solid black; */
+        }
 
+        .right {
+            height: 100%;
+            width: 10%;
+            /* border: 1px solid black; */
+            background-color: rgba(255, 166, 0, 0.774);
+            padding: .5%;
+            /* margin-top: 30px; */
+        }
+
+        .top {
+            height: 50%;
+            width: 97%;
+            /* border: 1px solid black; */
+            display: flex;
+
+        }
+
+        .a {
+            height: 100%;
+            width: 67%;
+            background-color: rgba(255, 166, 0, 0.774);
+            margin-right: 3%;
+            padding: 1%;
+
+        }
+
+        .b {
+            height: 100%;
+            width: 30%;
+            /* background-color: orange; */
+        }
+
+        .b1 {
+            height: 55%;
+            width: 100%;
+            padding: 3%;
+            background-color: rgba(255, 166, 0, 0.774);
+        }
+
+        .b2 {
+            height: 40%;
+            width: 100%;
+            margin-top: 7%;
+            padding: 3%;
+            background-color: rgba(255, 166, 0, 0.774);
+        }
+
+        .bottom {
+            height: 46.5%;
+            width: 97%;
+            /* border: 1px solid black; */
+            margin-top: 3%;
+
+        }
+
+        .img-a {
+            height: 48%;
+            width: 100%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content:space-between ;
+            
+        }
+
+        .img-b {
+            margin-top: 2%;
+            height: 48%;
+            width: 100% ;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content:space-between ;
+        }
+        .i4{
+            height: 100%;
+            width: 32%;
+            /* border: 1px solid black; */
+            padding: 1%;
+            background-color: rgba(255, 166, 0, 0.774);
+
+        }
+        .i5{
+            height: 100%;
+            width: 66%;
+            padding: 1%;
+            /* border: 1px solid black; */
+            background-color: rgba(255, 166, 0, 0.774);
+        }
+        .i6{
+            height: 100%;
+            width: 32%;
+            padding: 1%;
+            /* border: 1px solid black; */
+            background-color: rgba(255, 166, 0, 0.774);
+        }
     </style>
 </head>
+
 <body>
     <div class="main">
         <div class="left">
@@ -127,14 +146,19 @@ body{
                 </div>
             </div>
             <div class="bottom">
-                <div class="i4">Image 4</div>
-                <div class="i5">Image 5</div>
-                <div class="i6">Image 6</div>
-                <div class="i6">Image 7</div>
-                <div class="i6" id="x">Image 8</div>
+                <div class="img-a">
+                    <div class="i4">Image 4</div>
+                    <div class="i5">Image 5</div>
+                </div>
+                <div class="img-b">
+                    <div class="i6">Image 6</div>
+                    <div class="i6">Image 7</div>
+                    <div class="i6">Image 8</div>
+                </div>
             </div>
         </div>
         <div class="right">Image 7</div>
     </div>
 </body>
+
 </html>
