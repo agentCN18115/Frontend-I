@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instragram</title>
+    <script src="https://kit.fontawesome.com/4a81bf8a41.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing:border-box;
+        }
+        .main{
+            height: 100vh;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .instra{
+            /* height: 100px; */
+            /* width: 100px; */
+            /* border: 1px solid black; */
+            display: flex;
+            gap: 30px;
+        }
+        .left-img{
+            height: 100%;
+            width: 100%;
+
+        }
+        .right{
+            
+            /* border: 1px solid black; */
+            
+        }
+        .form{
+            border: 1px solid rgba(128, 128, 128, 0.472);
+            /* height: 100px;
+            width: 100px; */
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding-bottom: 15px;
+            
+        }
+        .input{
+            border: 1px solid rgba(128, 128, 128, 0.472);
+            width: 80%;
+            padding: 3%;
+            margin: 1%;
+        }
+        .log-in{
+            width: 80%;
+            border-radius: 5px;
+            padding: 3%;
+            border-style: none;
+            background-color: #2d88ffb9;
+            color: white;
+            font-weight: 1000;
+        }
+       
+        .line{
+            display: inline-block;
+            width: 100px;
+        }
+        .or{
+            display: inline;
+
+        }
+       
+        .facebook{
+            color: #385185;
+            font-weight: 900;
+            font-size: large;
+            /* outline: none; */
+            text-decoration: none;
+        }
+        .forgot{
+            color: #385185;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+
+        }
+        #sing-up{
+            text-decoration: none;
+            font-weight: bold;
+            color: #2d88ff;
+        }
+        .sing-up{
+            border: 1px solid rgba(128, 128, 128, 0.472);
+            /* height: 100px;
+            width: 100px; */
+            margin-top: 10px;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            /* font-size: large; */
+
+        }
+        .app-store{
+            /* border: 1px solid rgba(128, 128, 128, 0.472); */
+            /* height: 100px;
+            width: 100px; */
+            margin-top: 10px;
+            /* display: flex; */
+
+
+        }
+        .text{
+            text-align: center;
+            padding-top: 5px;
+        }
+        .imgs{
+            display: flex;
+            justify-content:space-between;
+            padding: 30px;
+            padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="instra">
+            <img class="left-img" src="left.png" alt="left-image">
+            <div class="right">
+                <div class="form">
+                    <!-- <form> -->
+                        <img class="innstragram-logo" src="logo.png" alt="instragram-logo">
+                        <input type="text" class="input" placeholder="Phone number,username or email address">
+                        <!-- <br> -->
+                        <input type="password" class="input" placeholder="Password">
+                        <br>
+                        <button class="log-in">Log in</button>
+                        <br>
+                            <div class="hr">
+                                <hr class="line"> <p class="or">&nbsp;&nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp;&nbsp;</p> <hr class="line">
+                            </div>
+                        <br>
+                        <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26locale%3Den_GB%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26response_type%3Dcode%252Cgranted_scopes%26scope%3Demail%26state%3D%257B%2522fbLoginKey%2522%253A%25221bcb24qh1pibr18lbd0c12gn3pqx44a2pa7luoc7fvi1rko9pc4%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D9a9f0507-9a4f-47c8-9055-ed654cadde49%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25221bcb24qh1pibr18lbd0c12gn3pqx44a2pa7luoc7fvi1rko9pc4%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=hi_IN&pl_dbl=0" class="facebook"><i class="fa-brands fa-square-facebook"></i> Log in with facebook </a>
+                        <br>
+                        <a href="https://www.instagram.com/accounts/password/reset/" class="forgot"> Forgotten your password?</a>
+                    <!-- </form> -->
+                </div>
+                <div class="sing-up ">Don't have a account? &nbsp;<a href="https://www.instagram.com/accounts/emailsignup/" id="sing-up">Sing up</a></div>
+                <div class="app-store">
+                    <div class="text">Get the app.</div>
+                    <div class="imgs">
+                        <img src="app store.png" alt="">
+                        <img src="playstore.png" alt="playstore">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
