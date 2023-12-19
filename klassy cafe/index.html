@@ -1,19 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klassy Cafe</title>
+    <script src="https://kit.fontawesome.com/4a81bf8a41.js" crossorigin="anonymous"></script>
+    
+
     <style>
         *{
             margin: 0px;
             padding: 0px;
+            box-sizing: border-box;
+
         }
 
-        .nav{}
+        .nav{
+            display: flex;
+            justify-content: space-between ;
+            align-items: center;
+            border: 1px solid black;
+        }
+        /* .klassy-img{
+            border: 1px solid black;
+
+        } */
+        .klassy-img img{
+            margin-left: 75px;
+            padding: 30px;
+        }
+
+        .menu{
+            /* border: 1px solid black; */
+            padding: 34px 0px; 
+            padding-right: 150px;
+        }
+
+        .menu button{
+            padding: 15px;
+            font-size: large;
+            font-weight: bolder;
+            float: left;
+            border: none;
+            background-color:white;
+        }
+
     </style>
 </head>
 <body>
-    <div class="nav"></div>
+    <div class="nav">
+        <div class="klassy-img">
+            <img  src="https://themewagon.github.io/klassy-cafe/assets/images/klassy-logo.png" alt="klassy-logo">
+        </div>
+        <div class="menu">
+            <button>Home</button>
+            <button>About</button>
+            <button>Menu</button>
+            <button>Chefs</button>
+            <button>Features <i class="fa-solid fa-angle-down"></i></button>
+            <button>Contact Us</button>
+        </div>
+    </div>
 </body>
 </html>
