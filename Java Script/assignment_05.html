@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(28, 123, 28, 0.361);
+        }
+
+        .main {
+            border: 4px solid wheat;
+            width: 23%;
+            box-shadow: 0px 0px 4px;
+            height: 400px;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 10px;
+            background-color: black;
+        }
+
+        input {
+            background-color: black;
+            color: white;
+            width: 100%;
+            font-size: 30px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            height: 50px;
+        }
+
+        button {
+            border-radius: 50%;
+            border: none;
+            margin: 2px;
+            font-size: 20px;
+            padding: 2px;
+            height: 60px;
+            width: 60px;
+            background-color: rgba(128, 128, 128, 0.152);
+            color: white;
+        }
+
+        .op {
+            background-color: orange;
+        }
+
+        .a {
+            background-color: rgba(128, 128, 128, 0.922);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" placeholder="0" autofocus>
+        <div class="buttons">
+            <button class="a">C</button>
+            <button class="a">DEL</button>
+            <button class="a">%</button>
+            <button class="op">/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="op">*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="op">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="op">+</button>
+            <button>0</button>
+            <button>00</button>
+            <button>.</button>
+            <button class="op">=</button>
+        </div>
+    </div>
+
+
+    <script>
+        let value = document.querySelectorAll("button");
+        // console.log(value);
+        for (let i of value) {
+            // console.log(i.innerText);
+
+            i.onclick = function () {
+                if (i.innerText == "=") {
+                    let data = document.querySelector("input").value;
+                    document.querySelector("input").value = eval(data);
+                }
+
+                else if (i.innerText == "C") {
+                    document.querySelector("input").value = "";
+                }
+
+                
+
+                else {
+                    document.querySelector("input").value += i.innerText;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

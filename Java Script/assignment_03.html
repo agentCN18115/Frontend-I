@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="first" type="text">
+    <input id="second" type="text">
+    <select name="" id="select">
+        <option value="None">none</option>
+        <option value="add">Add</option>
+        <option value="sub">Subtraction</option>
+        <option value="multi">Multiply</option>
+        <option value="divide">Divide</option>
+    </select>
+
+
+    <script>
+        document.getElementById("select").onclick = function(){
+            let first = Number(document.getElementById("first").value);
+            let second = Number(document.getElementById("second").value);
+            let opp = document.getElementById("select").value;
+
+            switch(opp){
+                case "add":{
+                    let temp = first+second;
+                    console.log(temp);
+                    break;
+                    }
+
+                case "sub":{
+                    let s = first-second;
+                    console.log(s);
+                    break;
+                    }
+
+                
+                case "multi":{
+                    let m = first*second;
+                    console.log(m);
+                    break;
+                    }
+
+                
+                case "divide":{
+                    let d = first/second;
+                    console.log(d);
+                    break;
+                    }
+            }
+        }
+    </script>
+</body>
+</html>

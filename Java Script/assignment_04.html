@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <a id="0" href="#">HTML</a>
+    <a id="1" href="#">CSS</a>
+    <a id="2" href="#">JavaScript</a>
+    <a id="3" href="#">MERN</a>
+
+    <script>
+            let a = document.querySelectorAll("a");
+        document.querySelector("a").onclick = function () {
+
+            // console.log(a);
+            for (let i of a) {
+               i.onclick = function(){
+
+                if (i.id == 0) {
+                    console.log("HTML");
+                }
+
+                else if (i.id == 1) {
+                    console.log("CSS");
+                }
+
+                else if (i.id == 2) {
+                    console.log("Javacript");
+                }
+
+                else if (i.id == 3) {
+                     console.log("MERN");
+                }
+               }
+            }
+        }
+
+
+        
+        // document.querySelector("#html").onclick = console.log("HTML"); ase kyu nehi kr skte
+
+    </script>
+</body>
+
+</html>

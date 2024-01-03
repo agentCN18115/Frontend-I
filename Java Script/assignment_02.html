@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            /* border: 1px solid black; */
+
+        }
+
+        .main {
+            border: 4px solid black;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 55em;
+            height: 30em;
+            margin-top: 2em;
+
+        }
+
+        .container-1 {
+            margin-top: 1em;
+        }
+
+        input {
+            width: 20em;
+            height: 2em;
+            padding: 3px;
+        }
+
+        button {
+            width: 5em;
+            height: 2em;
+            color: white;
+            background-color: #016bbca7;
+        }
+
+
+        .container-2 {
+            /* border: 1px solid black; */
+            width: 66%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .box {
+            height: 8em;
+            width: 8em;
+            margin: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="main">
+
+            <div class="container-1">
+                <input id="inp" type="text" placeholder="Color">
+                <input id="box" type="number" placeholder="Box Number">
+                <button>submit</button>
+            </div>
+
+
+            <div class="container-2">
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("button").onclick = function () {
+            let color = document.querySelector("#inp").value;
+            let number = document.querySelector("#box").value;
+            document.querySelector("#inp").value = "";
+            document.querySelector("#box").value = "";
+            document.querySelector("#inp").focus();
+            // console.log(color,number);
+
+            let box = document.querySelectorAll(".box");
+            if (box.length < number) {
+                alert('You can select only between 1 to 8')
+            }
+            console.log(box);
+            for (let i of box) {
+                if (i.id == number) {
+                    i.style.backgroundColor = color;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

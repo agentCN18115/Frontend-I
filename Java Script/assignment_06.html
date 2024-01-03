@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #10101E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            /* border: 1px solid white; */
+
+        }
+
+        .heading {
+            margin-bottom: 100px;
+        }
+
+        .top {
+            font-size: 100px;
+            color: whitesmoke;
+            font-weight: 900;
+            /* border: 1px solid white; */
+
+        }
+
+        .bottom {
+            color: whitesmoke;
+            font-size: 20px;
+            /* border: 1px solid white; */
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .clock {
+            border: 3px solid #2E94E3;
+            border-radius: 5px;
+            height: 150px;
+            width: 400px;
+            margin: auto;
+            color: white;
+        }
+
+        .clock:hover {
+            background: #2E94E3;
+            box-shadow: #2E94E3;
+            box-shadow:0px 0px 10px ; 
+
+        }
+
+        .date {
+            /* border: 1px solid white; */
+            font-size: 20px;
+            text-align: right;
+            padding-right: 20px;
+            
+        }
+
+        .time {
+            /* border: 1px solid white; */
+            font-size: 100px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="heading">
+            <div class="top">DIGITAL CLOCK</div>
+            <div class="bottom">HTML CSS & JAVASCRIPT </div>
+        </div>
+        <div class="clock">
+            <div class="time"></div>
+            <div class="date"></div>
+        </div>
+    </div>
+
+    <script>
+        
+        setInterval((uday) => {
+
+            let now = new Date;
+            var dnum = now.getDate(),
+            mo = now.getMonth()+1,
+            yr = now.getFullYear(),
+            dname = now.getDay(),
+            h = now.getHours(),
+            min = now.getMinutes(),
+            sec = now.getSeconds();
+
+            let weak = ["Sunday" , "Monday" , "Tueaday" , "Wednesday" , "Thursday" ,"Friday" , "Saturday"];
+        // console.log(time);
+
+        if(h == 0){
+            h = 12;
+          }
+        
+        if(min<10){
+            min = ("0") + min;
+        }
+
+        if(sec<10){
+            sec = ("0") + sec;
+        }
+        if(mo<10){
+            mo = ("0") + mo;
+        }
+        if(dnum<10){
+            dnum = ("0") + dnum;
+        }
+        
+        if(h > 12){
+            h = h - 12;
+        }
+        
+        if(h < 10){
+            h = ("0")+h;
+        }
+
+        let cd = dnum + ("-") + mo + ("-") + yr;
+        let ct = h + (":") + min + (":") + sec ;
+        document.querySelector(".date").innerHTML= weak[dname] + (" ") + cd;
+        document.querySelector(".time").innerHTML = ct; 
+
+        }, 10);
+
+    </script>
+</body>
+
+</html>

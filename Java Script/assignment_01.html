@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            border: 1px solid black;
+        }
+        .box{
+            height: 20em;
+            width: 900px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 100px;
+            background-color:antiquewhite;
+            padding: 30px;
+
+        }
+
+        .col{
+            /* border: 1px solid black; */
+            display: flex;
+            height: 40px;
+            width: 40%;justify-content: space-around;
+            margin-top: 2%;
+
+        }
+        
+        .color{
+            border: 1px solid black;
+            width: 40px;
+            border-radius: 50%; 
+        }
+
+        #red{
+            background-color: red;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #black{
+            background-color: black;
+        }
+        #white{
+            background-color: white;
+        }
+
+    </style>
+    <p id="text"></p>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="box">
+            <h1>Select a Domain</h1>
+            <br>
+            <select name="" id="select">
+                <option value="--Make a Choise--">--Make a Choise--</option>
+                <option value="React">React</option>
+                <option value="Django">Django</option>
+                <option value="Angualr">Angualr</option>
+                <option value="AWS">AWS</option>
+            </select>
+
+            <div class="col">
+                <div class="color" id="red"></div>
+                <div class="color" id="yellow"></div>
+                <div class="color" id="green"></div>
+                <div class="color" id="blue"></div>
+                <div class="color" id="black"></div>
+                <div class="color" id="white"></div>
+            </div>
+            <p id="info"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("red").onclick = function(){
+            document.getElementById("body").style.backgroundColor="red";
+        }
+        document.getElementById("yellow").onclick = function(){
+            document.getElementById("body").style.backgroundColor="yellow";
+        }
+        document.getElementById("green").onclick = function(){
+            document.getElementById("body").style.backgroundColor="green";
+        }
+
+        document.getElementById("blue").onclick = function(){
+            document.getElementById("body").style.backgroundColor="blue";
+        }
+
+        document.getElementById("black").onclick = function(){
+            document.getElementById("body").style.backgroundColor="black";
+        }   
+        document.getElementById("white").onclick = function(){
+            document.getElementById("body").style.backgroundColor="white";
+        }
+
+        document.getElementById("select").onclick = function(){
+            let a = document.getElementById("select").value;
+            console.log(a)
+            
+            if(a=="React"){
+                document.getElementById("info").innerText="React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js";
+            }
+            else if(a=="Django"){
+                document.getElementById("info").innerHTML="a";
+            }
+            else if(a=="Angualr"){
+                document.getElementById("info").innerHTML="a"; 
+
+            }
+            else if(a=="AWS"){
+                document.getElementById("info").innerHTML="a";
+
+            }
+            else if(a=="--Make a Choise--"){
+                document.getElementById("info").innerHTML="c";
+
+            }
+        }
+    </script>
+</body>
+</html>
