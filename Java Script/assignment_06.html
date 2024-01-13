@@ -26,7 +26,7 @@
         }
 
         .heading {
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
 
         .top {
@@ -73,15 +73,21 @@
             /* border: 1px solid white; */
             font-size: 100px;
             text-align: center;
-
-
+            /* background-color::; */
         }
+        
     </style>
 </head>
 
 <body>
 
     <div class="main">
+
+        <select name="" id="sele">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+        </select>
+
         <div class="heading">
             <div class="top">DIGITAL CLOCK</div>
             <div class="bottom">HTML CSS & JAVASCRIPT </div>
@@ -140,6 +146,25 @@
         document.querySelector(".time").innerHTML = ct; 
 
         }, 10);
+
+        document.getElementById("sele").onclick = function(){
+            let mode = document.querySelector("#sele").value;
+            if(mode == "light"){
+                document.body.style.backgroundColor = "palegoldenrod";
+                document.querySelector(".top").style.color = "black";
+                document.querySelector(".bottom").style.color = "black";
+                document.querySelector(".time").style.color = "black";
+                document.querySelector(".date").style.color = "black";
+
+            }
+            if(mode == "dark"){
+                document.body.style.backgroundColor = "#10101E";
+                document.querySelector(".top").style.color = "white";
+                document.querySelector(".bottom").style.color = "white";
+                document.querySelector(".time").style.color = "white";
+                document.querySelector(".date").style.color = "white";
+            }
+        }
 
     </script>
 </body>

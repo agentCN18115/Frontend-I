@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input autofocus type="text">
+    <button id="add">Add to Array</button>
+    <button id="print">Print</button>
+    <button id="even">Even</button>
+    <button id="odd">Odd</button>
+    <button id="rtl">RTL</button>
+    <button id="ltr">LTR</button>
+    <button id="screen">Print ON Screen</button>
+    <button id="Split">Split</button>
+    <h4 id="e"></h4>
+    <h4 id="o"></h4>
+
+    <script>
+        let even = [];
+        let odd = [];
+        let btn = document.querySelector("#add");
+        btn.addEventListener("click" , function(){
+            let x = document.querySelector("input").value;
+            document.querySelector("input").value = "";
+            document.querySelector("input").focus();
+            if(x%2==0) even.push(x);
+            else odd.push(x);
+        })
+
+        document.querySelector("#print").onclick = function(){
+            console.log(even);
+            console.log(odd);
+        }
+
+        document.querySelector("#even").onclick = function(){
+            even.pop();
+        }
+
+        document.querySelector("#odd").onclick = function(){
+            odd.pop();
+        }
+
+        document.querySelector("#rtl").onclick = function(){
+            let e = even.pop();
+            let o = odd.pop();
+
+            even.unshift(e);
+            odd.unshift(o);
+        }
+
+        document.querySelector("#ltr").onclick = function(){
+            let e = even.shift();
+            let o = odd.shift();
+
+            even.push(e);
+            odd.push(o);
+        }
+        document.querySelector("#screen").onclick = function(){
+            document.getElementById("e").innerText= even;
+            document.getElementById("o").innerText = odd;
+        }
+        document.querySelector("#split").onclick = function(){
+            let ev = even.join(" ");
+            odd.join(" ");
+        }
+
+
+
+    </script>
+</body>
+</html>

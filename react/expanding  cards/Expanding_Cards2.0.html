@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Cards</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 1px solid black;
+            background-image: url("bg-img.jpeg");
+            height: 100vh;
+            width: 100vw;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 100px;
+            color: aliceblue;
+            opacity: 1;
+            text-align: center
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: bisque;
+            margin-top: 5em;
+            padding: 5px;
+        }
+
+        .cards {
+            height: 25em;
+            /* width: 15em; */
+            border-radius: 20px;
+            margin: .5em;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: end;
+            padding: 1em;
+            color: aliceblue;
+            flex: .5;
+            transition: flex 1s;
+
+        }
+
+        .cards h2 {
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        .active {
+            flex: 3;
+            transition: flex 1s;
+        }
+
+        .active h2 {
+            opacity: 1;
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Expanding Cards</h1>
+        <div class="box">
+            <div class="cards" style="background-image: url(1.jpeg);">
+                <h2>Sunflower Garden</h2>
+            </div>
+            <div class="cards" style="background-image: url(2.jpeg);">
+                <h2>The Thar Desert</h2>
+            </div>
+            <div class="cards " style="background-image: url(3.jpeg);">
+                <h2>The Himalyas</h2>
+            </div>
+            <div class="cards" style="background-image: url(4.jpeg);">
+                <h2>The Forest</h2>
+            </div>
+            <div class="cards" style="background-image: url(5.jpeg);">
+                <h2>The Couds</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cards = document.querySelectorAll(".cards");
+        // console.log(cards);
+        for (let i of cards) {
+            i.onclick = function () {
+                remove_active();
+                i.classList.add("active");
+            }
+        }
+
+        function remove_active() {
+            for (let i of cards) {
+                i.classList.remove("active");
+            }
+        }
+    </script>
+</body>
+
+</html>

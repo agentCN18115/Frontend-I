@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <button>check</button>
+    <script>
+        // let a = [5,6,"uday",true,"53"];
+        // console.log(a);
+
+        // for(let i = 0; i< a.length; i++){
+        //     console.log(a[i]);
+        // }
+
+        // for(let i of a){
+        //     console.log(i);
+        //     // console.log(i);
+        // }
+
+
+        let a = [100 ,98, 52 ,44 ,99,78 ,96,63,88,"uday"];
+        let sum = 0;
+        // for(let i of a){
+        //     sum+=i; 
+        // }
+        // console.log(sum);
+
+        let max = 0;
+        for(let i of a){
+            if(max<i) max= i; 
+        }
+        // console.log(max);
+        
+        let temp = 0; 
+        for(let i of a){
+            if(temp<i &&i<max){
+                temp = i;
+            }
+        }
+
+        console.log(temp);
+
+
+        document.querySelector("button").onclick = function(){
+        let x = document.querySelector("input").value;
+        let flag = 0; 
+        for(let i of a){
+            if(x == i){
+                console.log(x,'is present')
+            }
+        }
+
+    }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let a = prompt("Enter a number: ");
+        // console.log(a);
+        prime();
+        
+        function prime(){
+            let a = prompt("Enter a number: ");
+            console.log(a);
+            let flag = 1; 
+                for(let i = 2 ; i< a; i++){
+                    if(a%i==0){flag=0}
+                }
+
+                if(flag){
+                    console.log(a+" is prime.");
+                    a = prompt("Enter a number: ");
+                 
+                }
+                else{
+                    console.log(a+" is not prime.");
+                    a = prompt("Enter a number: ");
+                
+                }
+        }
+
+        // prime(7);
+        // prime(69);
+        // prime(9);
+        // prime(6);
+        // prime(2);
+        // prime(3);
+        // prime(5);
+
+
+    </script>
+</body>
+</html>

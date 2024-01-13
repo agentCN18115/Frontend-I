@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // map is a call back function
+        // map is a mathed
+        // map takes  angument as a input
+        let a = [2,3,4,5,6,7];
+        let b = a.map(function(item){
+            // console.log(item);
+            return item + 10; 
+        })
+        console.log(b);
+
+        
+
+        let m = [22,23,24,25,26];
+        let p = m.map(function fun(x){
+            return x * 100;
+        })
+        console.log(p);
+
+
+        let y = [2,3 , 4 , 5 , 6 ,7 ,8 ,9,10]
+        let z = y.map(function(i){
+            if(i%2==0) return "even";
+            else return "odd";
+        }) 
+        console.log(z);
+
+
+
+        let arr = [10 , -10 , 30 ,"uday", true , false , -55,"$","c" ]
+        let ans = arr.map(function(item){
+            let x = typeof(item);
+
+            if(x=="number"){
+                if(item>=0) return "Positive Number"
+                else return "Negative Number"
+            }
+            else{
+                return x; 
+            }
+        })
+
+        console.log(ans);
+        </script>
+</body>
+</html>

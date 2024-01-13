@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    --------ques 1---------
+    <input type="text">
+    <button>submit</button> -->
+
+    <input type="text">
+    <button id="add">Add to Array</button>
+    <button id="print">Print Names</button>
+    <p></p>
+
+
+
+
+    
+
+    
+    <script>
+        // ----intro------ 
+        // let arr = [10,20,30,40,50];
+        // let first = arr.shift();
+        // let last =  arr.pop();
+        // arr.push(first);
+        // arr.unshift(last);
+        // console.log(arr);
+
+        // --------ques 1---------
+        // let array=[];
+        // document.querySelector("button").onclick = function(){
+        //     let x = document.querySelector("input").value;
+        //     array.push(x);
+        //     console.log(array);
+            
+        // }
+
+        let a = []; 
+        document.querySelector("#add").onclick = function(){
+            let x = document.querySelector("input").value;
+            a.push(x);
+            document.querySelector("input").value = "";
+            document.querySelector("input").focus();
+        }
+
+        document.querySelector("#print").onclick = function(){
+            let i = 0; 
+            setInterval(function(){
+                if(i==a.length){
+                    clearInterval();
+                }
+                else{
+                    // console.log(a[i]);
+                    document.querySelector("p").innerHTML += a[i]+"  ";
+                    i++;
+                }
+            },1000)
+        }
+
+
+    </script>
+</body>
+</html>
