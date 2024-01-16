@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nave-bar{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.logo{
+    border: 1px solid black;
+    margin: 1em;
+}
+.nave{
+    border: 1px solid red;
+
+}
+
+
+
+.nave-bar .nave a{
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1em;
+    font-family:sans-serif;
+    border: 1px solid black;
+    display: inline-block;
+    padding: .8em;
+
+}
+.fa-solid{
+    font-size: x-small;
+}

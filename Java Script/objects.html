@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+    <script>
+        // const obj = {
+        //     name: "Mohit",
+        //     age: 17,
+        //     city: "jaipur",
+        //     pincode: 302034,
+        // };
+        // // console.log(obj.name, obj.age , obj.city , obj.pincode);
+
+        // obj["number"] = 9876543210;
+
+
+
+        // for(let i in obj){
+        //     console.log(i);
+        //     console.log(obj[i]);
+        // }
+
+        
+
+
+        // let array = [
+        // {
+        //     name: "Mohit",
+        //     age: 17,
+        //     city: "jaipur",
+        //     pincod: 302034,
+        // },
+        // {
+        //     name: "uday",
+        //     age: 15,
+        //     city: "jaipur",
+        //     pincode: 302534,
+        // },
+        // {
+        //     name: "shailender",
+        //     age: 19,
+        //     city: "jaipur",
+        //     pincod: 302334,
+        // },
+        // {
+        //     name: "inder",
+        //     age: 21,
+        //     city: "jaipur",
+        //     pincod: 302004,
+        // },
+        // {
+        //     name: "khemu",
+        //     age: 20,
+        //     city: "jaipur",
+        //     pincod: 302030,
+        // }
+
+        // ];
+
+
+        // for(let i of array){
+        //     for(let j in i){
+        //         console.log(i[j]);
+        //     }
+        // }
+
+        // for(let i of array){
+            // console.log(i.name , i.age , i.city , i.pincod)
+        // }
+        
+
+        // array.map(function(array){
+        //     console.log(array.name , array.age , array.city , array.pincod)
+            
+        // })
+
+
+        // let new_Array = [
+        //     {
+        //         name: "uday",
+        //         age: 19,
+        //         city: "jaipur",
+        //     },
+        //     {
+        //         name: "inder", 
+        //         age: 22, 
+        //         city: "jaipur"
+        //     },
+        //     {
+        //         name: "shailendra", 
+        //         age: 17, 
+        //         city: "jaipur"
+        //     },
+        //     {
+        //         name: "khemu", 
+        //         age: 15, 
+        //         city: "jaipur"
+        //     },
+        //     {
+        //         name: "ankit", 
+        //         age: 20, 
+        //         city: "jaipur"
+        //     },
+        //     {
+        //         name: "mohit", 
+        //         age: 20, 
+        //         city: "jaipur"
+        //     },
+        //     {
+        //         name: "rohit", 
+        //         age: 20, 
+        //         city: "jaipur"
+        //     }
+
+        // ]
+
+        // let b  = new_Array.filter(function(item){
+        //     return item.age > 18; 
+        // })
+        
+        // console.log(b);
+        // for(let i of b){
+        //     console.log(i.name , i.age , i.city )
+            
+        // }
+
+
+        let myObj = {
+            name:"John",
+            age:30,
+            cars:[
+                {name:"Ford" , models:["Fiesta","focus","Mustang"]},
+                {name: "bmw", modle: ["320","x3","x5"]},
+                {name: "honda", modle: ["civic","city","amaze"]}
+
+            ]
+        }
+
+
+        myObj.cars.filter(function(item){
+            if(item.name == "bmw"){
+                item.modle.map((i)=>{
+                    console.log(i);
+                })
+            }
+        });
+
+        let x = myObj.cars.filter((item)=>{
+            return item.name == "bmw";
+        })
+
+
+        let y = x.map((item)=>{
+                console.log(item.modle.map((i)=>{return i;}));
+        })
+       
+    </script>
+</body>
+</html>
