@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter the First Number:<input id="First" autofocus type="text">
+    Enter the Second Number:<input id="Second"  type="text">
+    Enter the Third Number:<input id="Third"  type="text">
+
+    <button>Find Maximum</button>
+    <h4 id="ans"></h4>
+
+    <script>
+        document.querySelector("button").onclick = ()=>{
+            let num1 = document.querySelector("#First").value;
+            let num2 = document.querySelector("#Second").value;
+            let num3 = document.querySelector("#Third").value;
+            
+            document.querySelector("#First").value = "";
+            document.querySelector("#First").focus();
+            document.querySelector("#Second").value = "";
+            document.querySelector("#Third").value = "";
+
+            
+            if(num1>num2){if(num1>num3){document.querySelector("#ans").innerHTML ="The Largest No is:  "+ num1}
+                          else{document.querySelector("#ans").innerHTML ="The Largest No is:  "+ num3}}
+
+            else {if(num2>num3){document.querySelector("#ans").innerHTML ="The Largest No is:  "+ num2}
+                  else{document.querySelector("#ans").innerHTML ="The Largest No is:  "+ num3}}
+        }
+       
+       
+    </script>
+</body>
+</html>

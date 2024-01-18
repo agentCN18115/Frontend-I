@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter the First Number:<input id="First" autofocus type="text">
+    Enter the Second Number:<input id="Second" autofocus type="text">
+    <button>Find Maximum</button>
+    <!-- <button id="btn">aa</button> -->
+    <h4 id="ans"></h4>
+
+    <script>
+        document.querySelector("button").onclick = ()=>{
+            let num1 = document.querySelector("#First").value;
+            let num2 = document.querySelector("#Second").value;
+            document.querySelector("#First").value = "";
+            document.querySelector("#First").focus();
+            document.querySelector("#Second").value = "";
+            
+            if(num1>num2){document.querySelector("#ans").innerHTML = num1}
+            else {document.querySelector("#ans").innerHTML = num2}
+        }
+       
+        // let x = 5; 
+        // document.querySelector("#btn").onclick = ()=>{
+        //     let x = 10 ;
+        //     console.log(x);
+        // }
+        // console.log(x);
+    </script>
+</body>
+</html>

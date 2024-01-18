@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const complexData = [
+          {
+            id: 1,
+            name: "John Doe",
+            age: 30,
+            address: {
+              street: "123 Main St",
+              city: "Anytown",
+              country: "USA",
+            },
+            orders: [
+              { orderId: "A123", amount: 50.75, status: "completed" },
+              { orderId: "B456", amount: 30.25, status: "pending" },
+            ],
+          },
+          {
+            id: 2,
+            name: "Jane Smith",
+            age: 25,
+            address: {
+              street: "456 Oak St",
+              city: "Othercity",
+              country: "USA",
+            },
+            orders: [
+              { orderId: "C789", amount: 100.5, status: "completed" },
+              { orderId: "D012", amount: 75.2, status: "completed" },
+            ],
+          },
+        ];
+
+
+        // ques 1
+        let x =
+        //  complexData.map((item)=>{
+        //    for(i in item){
+        //        if(item.age<=25){
+        //             return item;
+        //        } 
+        //    }
+        // })
+            complexData.filter((user)=>user.age<=25);
+        console.log(x);
+
+
+
+        // ques 2
+        let na = 
+        complexData.map((it)=>{
+            return it.name;
+        })
+        console.log(na);
+
+
+        // ques 3
+
+        let od = complexData.flatMap((it)=>{
+          return it.orders.filter((i)=>{ 
+            return i.amount > 50;
+          })
+        });
+        console.log(od);
+        
+
+        // ques 4; 
+        let oid = complexData.flatMap((it)=>{
+          return it.orders.map((i)=>{return i.orderId})
+        })
+        console.log(oid);
+
+        // ques 5
+        let sta = complexData.flatMap((it)=>{return it.orders.filter((i)=>{
+          return i.status=="pending"})
+        }) 
+        console.log(sta);
+        
+
+        // ques 6 
+        let ans6 = complexData.map((it)=>{
+          let name = it.name;
+          let total = it.orders.reduce((amt,next)=> amt.amount + next.amount)
+          return { Name : name , Total_amount: total}
+        }) 
+        console.log(ans6)
+
+
+        // ques 7 
+        let ans7 = complexData.flatMap((it)=> it.orders.filter((i)=> i.amount>30 || i.amount<70 ))
+
+        console.log(ans7);
+
+
+        // quse 8
+        let ans8 = complexData.map
+
+
+    </script>
+</body>
+</html>
+
+
